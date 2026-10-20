@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SafeData IA: prototipo de anonimización de documentos para proteger información personal antes de usar herramientas de inteligencia artificial.">
+  <title>Inicio | SafeData IA</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="SafeData IA, ir al inicio"><span class="brand-mark" aria-hidden="true">SD</span><span>SafeData <strong>IA</strong></span></a>
+      <nav aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="index.html" aria-current="page">Inicio</a></li>
+          <li><a href="#solucion">Solución</a></li>
+          <li><a href="#proceso">Cómo funciona</a></li>
+          <li><a href="pages/anonimizar.html">Anonimizar</a></li>
+          <li><a href="pages/resultados.html">Resultados</a></li>
+        </ul>
+      </nav>
+      <a class="button button-primary header-cta" href="pages/anonimizar.html">Comenzar</a>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">PROTOTIPO ACADÉMICO · PRIVACIDAD DOCUMENTAL</p>
+        <h1 id="hero-title">Protegé tus documentos <em>antes de utilizar IA</em></h1>
+        <p class="lead">SafeData IA ayuda a identificar y ocultar información personal en textos, con una revisión previa antes de exportarlos.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="pages/anonimizar.html">Comenzar anonimización <span aria-hidden="true">→</span></a>
+          <a class="button button-secondary" href="#proceso">Conocer el proceso</a>
+        </div>
+        <p class="fine-print">Demostración educativa: los resultados requieren revisión humana y no garantizan anonimización completa.</p>
+      </div>
+      <aside class="preview-panel" aria-label="Ejemplo ilustrativo de anonimización">
+        <div class="panel-top"><span>SAFEDATA // VISTA PREVIA</span><span class="status">● EJEMPLO</span></div>
+        <div class="document-block">
+          <h2>Documento original</h2>
+          <p>Paciente: María González</p>
+          <p>DNI: 32.456.789</p>
+        </div>
+        <div class="document-block safe-block">
+          <h2>Documento anonimizado</h2>
+          <p>Paciente: <mark>[NOMBRE]</mark></p>
+          <p>DNI: <mark>[DNI]</mark></p>
+        </div>
+        <p class="panel-note">Ejemplo ficticio. Esta vista no procesa archivos.</p>
+      </aside>
+    </section>
+
+    <section id="solucion" class="section section-alt" aria-labelledby="solution-title">
+      <div class="container">
+        <p class="eyebrow">LA SOLUCIÓN</p>
+        <h2 id="solution-title">Privacidad pensada para profesionales</h2>
+        <p class="section-intro">Un recorrido sencillo para investigadores y profesionales que trabajan con documentos sensibles.</p>
+        <div class="card-grid">
+          <article class="feature-card"><span class="card-number">01</span><h3>Perfiles profesionales</h3><p>Elegí un perfil como Salud, Legal o Finanzas para orientar las reglas de detección.</p></article>
+          <article class="feature-card"><span class="card-number">02</span><h3>Comparación clara</h3><p>Revisá el texto original junto a la versión modificada antes de descargar.</p></article>
+          <article class="feature-card"><span class="card-number">03</span><h3>Control del usuario</h3><p>Corregí sustituciones incorrectas y decidí qué información conservar.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="proceso" class="section container" aria-labelledby="process-title">
+      <p class="eyebrow">FLUJO DE TRABAJO</p>
+      <h2 id="process-title">Del documento a la versión revisada</h2>
+      <ol class="steps">
+        <li><h3>Ingresá el texto</h3><p>Cargá el contenido que querés revisar.</p></li>
+        <li><h3>Elegí un perfil</h3><p>Seleccioná el ámbito profesional y las opciones de anonimización.</p></li>
+        <li><h3>Revisá los cambios</h3><p>Compará ambas versiones y corregí los resultados.</p></li>
+        <li><h3>Exportá el resultado</h3><p>Descargá la versión revisada para su uso posterior.</p></li>
+      </ol>
+      <a class="button button-primary" href="pages/anonimizar.html">Ir a la herramienta</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p><strong>SafeData IA</strong> · Proyecto académico de Programación IV</p>
+      <p>Prototipo educativo. No ingresar datos personales reales durante las pruebas.</p>
+    </div>
+  </footer>
+</body>
+</html>

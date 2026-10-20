@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Prepará un texto de demostración para revisar posibles datos sensibles con SafeData IA.">
+  <title>Anonimizar documento | SafeData IA</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="SafeData IA, ir al inicio"><span class="brand-mark" aria-hidden="true">SD</span><span>SafeData <strong>IA</strong></span></a>
+      <nav aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="../index.html#solucion">Solución</a></li>
+          <li><a href="../index.html#proceso">Cómo funciona</a></li>
+          <li><a href="anonimizar.html" aria-current="page">Anonimizar</a></li>
+          <li><a href="resultados.html">Resultados</a></li>
+        </ul>
+      </nav>
+      <a class="button button-primary header-cta" href="anonimizar.html">Comenzar</a>
+    </div>
+  </header>
+  <main id="contenido" class="container tool-main">
+    <section aria-labelledby="page-title">
+      <p class="eyebrow">PASO 01 / PREPARAR DOCUMENTO</p>
+      <h1 id="page-title" class="tool-title">Prepará tu <em>documento</em></h1>
+      <p class="lead">Pegá un texto de prueba, elegí el perfil profesional y configurá qué datos querés detectar. Podrás revisar el resultado antes de exportarlo.</p>
+      <p class="tool-warning" role="note"><strong>Prototipo educativo:</strong> usá únicamente información ficticia. La detección automática puede omitir datos sensibles y no garantiza anonimización completa.</p>
+    </section>
+
+    <section class="tool-layout" aria-label="Configuración de anonimización">
+      <form id="anonymize-form" class="tool-card" novalidate>
+        <div class="tool-card-heading"><span class="card-number">01 / DOCUMENTO</span><h2>Ingresar contenido</h2></div>
+        <div class="form-field">
+          <label for="document-title">Título del documento <span aria-hidden="true">*</span></label>
+          <input id="document-title" name="documentTitle" type="text" required minlength="3" maxlength="100" autocomplete="off" aria-describedby="title-hint title-error" placeholder="Ej.: Informe de investigación">
+          <p id="title-hint" class="field-hint">Solo para identificar tu documento durante esta demostración.</p>
+          <p id="title-error" class="field-error" aria-live="polite"></p>
+        </div>
+        <div class="form-field">
+          <label for="document-text">Texto del documento <span aria-hidden="true">*</span></label>
+          <textarea id="document-text" name="documentText" rows="11" required minlength="20" aria-describedby="text-hint text-error" placeholder="Ej.: Paciente: Ana Pérez. DNI: 12.345.678. Correo: ana@example.com..."></textarea>
+          <p id="text-hint" class="field-hint">Mínimo 20 caracteres. En esta versión se trabaja con texto pegado, no con archivos PDF o DOCX.</p>
+          <p id="text-error" class="field-error" aria-live="polite"></p>
+        </div>
+        <div class="tool-card-heading"><span class="card-number">02 / CONFIGURACIÓN</span><h2>Elegir perfil y reglas</h2></div>
+        <div class="form-field">
+          <label for="professional-profile">Perfil profesional</label>
+          <select id="professional-profile" name="profile" aria-describedby="profile-hint">
+            <option value="salud">Salud</option>
+            <option value="legal">Legal</option>
+            <option value="finanzas">Finanzas</option>
+          </select>
+          <p id="profile-hint" class="field-hint">El perfil orientará las reglas que implementaremos con JavaScript.</p>
+        </div>
+        <fieldset class="form-field option-group">
+          <legend>Opciones de detección</legend>
+          <label class="check-option"><input type="checkbox" name="detectDni" checked> Detectar DNI</label>
+          <label class="check-option"><input type="checkbox" name="detectEmail" checked> Detectar correos electrónicos</label>
+          <label class="check-option"><input type="checkbox" name="detectPhone" checked> Detectar teléfonos</label>
+          <label class="check-option"><input type="checkbox" name="detectNames"> Detectar nombres con patrones básicos (requiere revisión)</label>
+          <label class="check-option"><input type="checkbox" name="detectAge"> Detectar edades (opcional; desactivado para conservar datos estadísticos)</label>
+        </fieldset>
+        <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+        <div class="form-actions">
+          <button class="button button-primary" type="submit">Revisar documento <span aria-hidden="true">→</span></button>
+          <button class="button button-secondary" type="reset">Limpiar</button>
+        </div>
+      </form>
+      <aside class="tool-aside" aria-labelledby="aside-title">
+        <p class="eyebrow">FLUJO DE TRABAJO</p>
+        <h2 id="aside-title">Privacidad bajo tu control</h2>
+        <ol class="side-steps">
+          <li><strong>Ingresar</strong><span>Escribí o pegá un documento ficticio.</span></li>
+          <li><strong>Configurar</strong><span>Seleccioná un perfil y las categorías de datos.</span></li>
+          <li><strong>Comparar</strong><span>Revisá cada reemplazo y corregí errores.</span></li>
+          <li><strong>Descargar</strong><span>Exportá solo después de verificar el resultado.</span></li>
+        </ol>
+        <div class="aside-note"><strong>Próxima etapa:</strong> conectaremos este formulario con JavaScript y la pantalla de resultados. La estructura actual todavía no procesa el texto.</div>
+      </aside>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><p><strong>SafeData IA</strong> · Proyecto académico de Programación IV</p><p>Usar solo datos ficticios durante las pruebas.</p></div></footer>
+</body>
+</html>

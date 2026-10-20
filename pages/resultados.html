@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ejemplo de revisión de resultados de anonimización en SafeData IA.">
+  <title>Resultados de demostración | SafeData IA</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="SafeData IA, ir al inicio"><span class="brand-mark" aria-hidden="true">SD</span><span>SafeData <strong>IA</strong></span></a>
+      <nav aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="../index.html#solucion">Solución</a></li>
+          <li><a href="../index.html#proceso">Cómo funciona</a></li>
+          <li><a href="anonimizar.html">Anonimizar</a></li>
+          <li><a href="resultados.html" aria-current="page">Resultados</a></li>
+        </ul>
+      </nav>
+      <a class="button button-primary header-cta" href="anonimizar.html">Comenzar</a>
+    </div>
+  </header>
+  <main id="contenido" class="container tool-main">
+    <section aria-labelledby="page-title">
+      <p class="eyebrow">PASO 02 / REVISIÓN DE EJEMPLO</p>
+      <h1 id="page-title" class="tool-title">Revisá los <em>resultados</em></h1>
+      <p class="lead">Compará el documento original con una versión modificada. Este ejemplo utiliza exclusivamente datos ficticios.</p>
+      <p class="tool-warning" role="note"><strong>Demostración independiente:</strong> esta pantalla muestra un ejemplo precargado. Para procesar tu propio texto de prueba, utilizá <a href="anonimizar.html">la pantalla de anonimización</a>, donde también podrás editar y descargar el resultado.</p>
+    </section>
+    <section class="results-grid" aria-label="Comparación de documentos">
+      <article class="tool-card">
+        <p class="card-number">01 / ORIGINAL</p>
+        <h2>Documento ficticio</h2>
+        <div class="document-block">
+          <p>Paciente: Ana Pérez</p>
+          <p>DNI: 12.345.678</p>
+          <p>Correo: ana@example.com</p>
+          <p>Edad: 42 años</p>
+          <p>Motivo: control médico de rutina.</p>
+        </div>
+      </article>
+      <article class="tool-card">
+        <p class="card-number">02 / VERSIÓN DEMOSTRATIVA</p>
+        <h2>Documento revisable</h2>
+        <label for="demo-result" class="results-label">Podés editar el ejemplo</label>
+        <textarea id="demo-result" rows="10" spellcheck="false">Paciente: [NOMBRE]
+DNI: [DNI]
+Correo: [CORREO]
+Edad: 42 años
+Motivo: control médico de rutina.</textarea>
+        <p class="field-hint">Se conserva la edad para ilustrar una decisión de configuración solicitada en el test de usabilidad.</p>
+        <p id="demo-status" class="form-status" role="status" aria-live="polite"></p>
+        <div class="form-actions">
+          <button class="button button-secondary" type="button" id="demo-reset">Restaurar ejemplo</button>
+          <button class="button button-primary" type="button" id="demo-download">Descargar ejemplo TXT</button>
+        </div>
+      </article>
+    </section>
+    <section class="section results-next" aria-labelledby="next-title">
+      <p class="eyebrow">SIGUIENTE PASO</p>
+      <h2 id="next-title">Probá tu propio documento ficticio</h2>
+      <p class="section-intro">La herramienta de anonimización permite seleccionar reglas de detección, comparar el texto y corregir manualmente los reemplazos antes de descargarlo.</p>
+      <a class="button button-primary" href="anonimizar.html">Ir a anonimización <span aria-hidden="true">→</span></a>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><p><strong>SafeData IA</strong> · Prototipo académico de Programación IV.</p><p>No usar con información personal real.</p></div></footer>
+</body>
+</html>
